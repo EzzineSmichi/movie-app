@@ -10,49 +10,47 @@ function App () {
   const [movies, setMovies] = useState([ 
     {
       title : '365 Days',
-      description : 'bbbbb',
-      posteUrl : 'bbbbb.com',
+      description : 'Lorem ipsum dolor sit amet.',
+      posteUrl : '365Days.com',
       rate : 2
     }, 
     {
       title : '100 Days',
-      description : 'dsskkkllk',
-      posteUrl : 'fhjdkks.com',
+      description : 'Lorem ipsum dolor sit amet.',
+      posteUrl : '100Days.com',
       rate : 5
     },
     {
       title : 'One Day',
-      description : 'dsskkkllk',
-      posteUrl : 'fhjdkks.com',
+      description : 'Lorem ipsum dolor sit amet.',
+      posteUrl : 'OneDay.com',
       rate : 3
     },
     
       {
         title : 'One, Two, Three',
         description : 'dsskkkllk',
-        posteUrl : 'fhjdkks.com',
+        posteUrl : 'OneTwoThree.com',
         rate : 4
       }
     
    ])
 
-    
+  //state for searching movie by title  
   const [searchTerm, setsearchTerm] = useState('')
-
-  const dynamicSearch = () => {
-    
-      return movies.filter(movie=> movie.rate >= val && movie.title.toLowerCase().includes(searchTerm.toLowerCase())) 
-
-    
-  }
-     
   
 
+  //searching movie by title or/and rating
+  const dynamicSearch = () => {
+      return movies.filter(movie=> movie.rate >= val && movie.title.toLowerCase().includes(searchTerm.toLowerCase()))   
+  }
+     
+  //add movie
   const addNewMovie = newMovie => {
     return setMovies([...movies, newMovie])
   }
 
-
+  //state change the value of rating
   const [val, setVal] = useState(1)
     
       return (
