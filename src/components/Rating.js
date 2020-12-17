@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
 
-function Rating({rate, setVal={}}) {
-
-    const [rating, setRating] = useState(null)
-   
-
+function Rating({ rate, setVal = {} }) {
 
     return (
         <div>
@@ -18,13 +14,12 @@ function Rating({rate, setVal={}}) {
                         <input type = 'radio' 
                             name = 'rate' 
                             value = {ratingValue}
-                            onClick = {()=>{setRating(ratingValue); setVal(ratingValue)}}
+                            onClick = {()=>{ setVal(ratingValue)}}
                         />
 
                         <FaStar className = 'star' 
                             size ={25} 
-                            color = {ratingValue <=(rate ||rating)  ? '#ffc107': '#e4e5e9'}
-                            onClick = {()=>setRating(ratingValue)}
+                            color = {ratingValue <= rate ? '#ffc107': '#e4e5e9'}
                         />
                         
                     </label>
