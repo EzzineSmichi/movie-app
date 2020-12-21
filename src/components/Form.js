@@ -5,12 +5,11 @@ const Form = ({addNewMovie}) => {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
-    const [posteUrl, setPosteUrl] = useState('')
     const [rate, setRate] = useState('')
 
     const handleSubmit = e =>{
         e.preventDefault();
-        let newMovie = { title, description, posteUrl, rate }
+        let newMovie = { title, description, rate }
         addNewMovie(newMovie);
         setTitle('')
         setDescription('')
@@ -20,10 +19,9 @@ const Form = ({addNewMovie}) => {
 
     return (
         <form onSubmit = {handleSubmit} className = 'form'>
-                <input type='text' value = {title} onChange = {e => setTitle(e.target.value)}/>  
-                <textarea rows = '10' cols = '10' value = {description} onChange = {e => setDescription(e.target.value)}/> 
-                <input type ='url' value = {posteUrl} onChange = {e => setPosteUrl(e.target.value)} /> 
-                <input type = 'number' min= '1' max = '5' value = {rate} onChange = {e => setRate(e.target.value)} />
+                <input type='text' value = {title} onChange = {e => setTitle(e.target.value)} placeholder='enter title of movie'/>  
+                <textarea rows = '10' cols = '10' value = {description} onChange = {e => setDescription(e.target.value)} placeholder='enter a description of movie'/> 
+                <input type = 'number' min= '1' max = '5' value = {rate} onChange = {e => setRate(e.target.value)} placeholder='enter a rating for movie'/>
                 
                 <br/>
                 <button>add movie</button>

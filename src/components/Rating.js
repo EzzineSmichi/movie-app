@@ -2,9 +2,10 @@ import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
 
-function Rating({ rate, setVal = {} }) {
+function Rating({ rate, setVal =()=>{} }) {
 
     return (
+        
         <div>
             {[...Array(5)].map((star, i)=>{
 
@@ -14,12 +15,12 @@ function Rating({ rate, setVal = {} }) {
                         <input type = 'radio' 
                             name = 'rate' 
                             value = {ratingValue}
-                            onClick = {()=>{ setVal(ratingValue)}}
+                            onClick = {()=>setVal(ratingValue)}
                         />
 
                         <FaStar className = 'star' 
                             size ={25} 
-                            color = {ratingValue <= rate ? '#ffc107': '#e4e5e9'}
+                            color = {ratingValue <= rate ? '#ffc107': '#000'}
                         />
                         
                     </label>
