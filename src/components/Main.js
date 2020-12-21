@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa';
 import MovieList from './MovieList';
 import Form from './Form';
 import Rating from './Rating';
-import DataMovies from './DataMovies';
+import DataMovie from './DataMovie';
 
 
 const Main = () => {
