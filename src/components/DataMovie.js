@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DataMovies = [
+const DataMovie = [
     {
         id : Math.random(),
         title : 'La nuit de la lune aveugle',
