@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-
-import { FaSearch } from 'react-icons/fa';
 import MovieList from './MovieList';
 import Form from './Form';
 import Rating from './Rating';
