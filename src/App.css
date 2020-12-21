@@ -45,7 +45,7 @@
 .form {
   width: 50%;
   margin: 1rem auto;
-  border: 3px solid rgb(250, 3, 229);
+  border: 3px solid #ccc;
   display: flex;
   flex-direction: column;
   padding: 1rem;

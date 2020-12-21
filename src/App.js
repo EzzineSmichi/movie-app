@@ -1,15 +1,9 @@
-import { useState } from 'react';
-import MovieList from './components/MovieList';
-import Form from './components/Form';
-import './App.css';
-import Rating from './components/Rating';
+import React from 'react';
 import Main from './components/Main';
-
+import './App.css';
 
 function App () {
 
-  
-    
       return (
         <div className='App'>
           <Main />
