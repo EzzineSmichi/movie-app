@@ -82,4 +82,4 @@ const DataMovie = [
     }
 ]
 
-export default DataMovies
+export default DataMovie
