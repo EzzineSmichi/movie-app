@@ -9,7 +9,8 @@ const Form = ({addNewMovie}) => {
 
     const handleSubmit = e =>{
         e.preventDefault();
-        let newMovie = { title, description, rate }
+        let id = Math.random();
+        let newMovie = { id, title, description, rate }
         addNewMovie(newMovie);
         setTitle('')
         setDescription('')
